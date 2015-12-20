@@ -1,16 +1,20 @@
+'use strict';
+
 const assert = require('assert');
+
+class Person {
+  constructor(name) {
+    this.name = name
+  }
+  say(message) {
+    return `${this.name} says ${message}`
+  }
+}
 
 describe('Classes', () => {
 
   it('definition', () => {
-    class Person {
-      constructor(name) {
-        this.name = name
-      }
-      say(message) {
-        return `${this.name} says ${message}`
-      }
-    }
+
 
     let p = new Person('the dude');
 
